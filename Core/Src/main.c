@@ -154,11 +154,27 @@ int main(void)
   championship_micromouse_init();
 
 
+<<<<<<< Updated upstream
   // Check gyro initialization
   if (!mpu9250_is_initialized()) {
       send_bluetooth_message("❌ CRITICAL: Gyroscope initialization failed!\r\n");
 
   }
+=======
+   //use gyro PID/////////////////////////////////////////////////////////////
+//  moveStraightGyroPID_Reset();
+//  //moveStraightPID_Reset();
+//  int left=0;
+//  int right=0;
+//  while(left*(-1)<=2555 || right*(-1)<=2539){
+//	  mpu9250_read_gyro();
+//	  left=get_left_encoder_total();
+//	  right=get_right_encoder_total();
+//	  moveStraightGyroPID();
+//	  //send_bluetooth_printf("L:%ld R:%ld\r\n",left,right);
+//  }
+//  break_motors();
+>>>>>>> Stashed changes
 
   // Test ADC functionality
   update_sensors();
@@ -183,8 +199,27 @@ int main(void)
 //    // Left motor forward, right motor backward
 //    HAL_Delay(1);
 //  }
+<<<<<<< Updated upstream
 //  stop_motors();
 //  robot.direction = (robot.direction + 1) % 4;
+=======
+
+
+  // 0 = auto (both → center; else follow visible side), 1 = left, 2 = right
+  int mode = 0;               // WF_AUTO
+  int base_pwm = 570;         // use the speed you tuned at
+//
+//  // bootstrap targets & reset integrators
+  //wall_follow_reset_int(mode, base_pwm);
+
+  while (1) {
+      wall_follow_step();     // computes e, PID, sets motor PWMs
+      //HAL_Delay(2);           // keep a steady loop
+      dwt_delay_us(50);
+  }
+
+
+>>>>>>> Stashed changes
 
 //  debug_encoder_setup();
 //  test_encoder_manual();

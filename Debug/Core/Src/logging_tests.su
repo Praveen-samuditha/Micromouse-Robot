@@ -1,0 +1,8 @@
+../Core/Src/logging_tests.c:27:13:log_printf	272	static
+../Core/Src/logging_tests.c:48:14:clampf	24	static
+../Core/Src/logging_tests.c:53:19:clampi	24	static
+../Core/Src/logging_tests.c:61:6:run_gyro_step_test	136	static
+../Core/Src/logging_tests.c:129:6:run_encoder_step_test	112	static
+../Core/Src/logging_tests.c:190:6:run_gyro_turn_step_test	80	static
+../Core/Src/logging_tests.c:236:6:run_wall_lateral_step_test	136	static
+../Core/Src/logging_tests.c:298:6:run_wall_single_left_step_test	152	static

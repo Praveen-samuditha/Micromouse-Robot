@@ -35,8 +35,13 @@
 #define ENCODER_COUNTS_PER_TURN 500
 
 /* Sensor thresholds */
+<<<<<<< Updated upstream
 #define WALL_THRESHOLD_FRONT 2000
 #define WALL_THRESHOLD_SIDE 1500
+=======
+#define WALL_THRESHOLD_FRONT 30   //2000
+#define WALL_THRESHOLD_SIDE 8      //1500
+>>>>>>> Stashed changes
 #define BATTERY_LOW_THRESHOLD 3000
 #define IR_AMBIENT_THRESHOLD 500
 
